@@ -3,8 +3,16 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set nocompatible               
 filetype off                 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+
+if has("win32") || has("win16")
+  set rtp+=~/vimfiles/bundle/Vundle.vim/
+  let path='~/vimfiles/bundle'
+  call vundle#begin(path)
+else
+  set rtp+=~/.vim/bundle/vundle/
+  call vundle#rc()
+endif
+
 " let Vundle manage Vundle
 Bundle 'gmarik/vundle' 
 " colorscheme
@@ -35,7 +43,11 @@ set synmaxcol=512            " no syntax coloring for very long lines
 colorscheme molokai          " set colorscheme 
 " set the font
 if has('gui_running')        
-  set guifont=DejaVu\ Sans\ Mono\ 11
+  if has("win32") || has("win16")
+    set guifont=DejaVu_Sans_Mono:h11:cANSI
+  else
+    set guifont=DejaVu\ Sans\ Mono\ 11
+  endif
 endif
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
