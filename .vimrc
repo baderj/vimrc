@@ -23,6 +23,10 @@ Bundle 'bling/vim-airline'
 Bundle 'scrooloose/nerdtree'
 " syntax checker 
 Bundle 'scrooloose/syntastic'
+" csv editor 
+Bundle 'chrisbra/csv.vim'
+" surrend stuff with symbols
+Bundle 'tpope/vim-surround.git'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " General
@@ -77,6 +81,9 @@ cno jj <c-c>                 " ...
 vno v <esc>                  " use v in visual mode to switch off
 nmap <leader>nt :NERDTree<cr> " run nerd tree
 nnoremap <leader>c :w<cr>:SyntasticCheck<cr>    
+noremap <C-S> :update<CR>    " save with CTRL+S
+vnoremap <C-S> <C-C>:update<CR>
+inoremap <C-S> <C-O>:update<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Navigation / Search
@@ -102,6 +109,7 @@ set guioptions-=T            " remove toolbar
 set guioptions-=r            " remove right-hand scroll bar
 set colorcolumn=72,80        " highlight 72/80 column (PEP8)
 highlight ColorColumn guibg=gray18
+set nofoldenable             " disable folding
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Backup/Swap Settings
@@ -123,3 +131,6 @@ let g:syntastic_mode_map = { 'mode': 'passive',
                           \ 'active_filetypes': [],     
                           \ 'passive_filetypes': [] } 
 let g:syntastic_auto_loc_list=1     
+
+" airline
+let g:airline#extensions#tabline#enabled = 1
