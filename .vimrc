@@ -1,6 +1,7 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugins (managed by Vundle)
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 set nocompatible               
 filetype off                 
 
@@ -12,6 +13,7 @@ else
   set rtp+=~/.vim/bundle/vundle/
   call vundle#rc()
 endif
+
 
 " let Vundle manage Vundle
 Bundle 'gmarik/vundle' 
@@ -27,6 +29,9 @@ Bundle 'scrooloose/syntastic'
 Bundle 'chrisbra/csv.vim'
 " surrend stuff with symbols
 Bundle 'tpope/vim-surround.git'
+
+call vundle#end() 
+filetype plugin indent on 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " General
