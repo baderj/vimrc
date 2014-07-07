@@ -3,6 +3,7 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 set nocompatible               
+let g:vundle_lazy_load=1
 filetype off                 
 
 if has("win32") || has("win16")
@@ -10,7 +11,7 @@ if has("win32") || has("win16")
   let path='~/vimfiles/bundle'
   call vundle#begin(path)
 else
-  set rtp+=~/.vim/bundle/vundle/
+  set rtp+=~/.vim/bundle/Vundle.vim/
   call vundle#rc()
 endif
 
@@ -126,7 +127,7 @@ set noswapfile               " disable swapfiles
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Editing 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set clipboard=unnamed       " use system clipboard 
+set clipboard=unnamedplus       " use system clipboard 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugin Settings 
