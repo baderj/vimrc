@@ -90,6 +90,8 @@ nnoremap <leader>c :w<cr>:SyntasticCheck<cr>
 noremap <C-S> :update<CR>    " save with CTRL+S
 vnoremap <C-S> <C-C>:update<CR>
 inoremap <C-S> <C-O>:update<CR>
+" select last paste in visual mode
+nnoremap <expr> gb '`[' . strpart(getregtype(), 0, 1) . '`]'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Navigation / Search
