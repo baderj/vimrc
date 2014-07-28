@@ -30,6 +30,8 @@ Bundle 'scrooloose/syntastic'
 Bundle 'chrisbra/csv.vim'
 " surrend stuff with symbols
 Bundle 'tpope/vim-surround.git'
+" obvious resize  
+Bundle 'talek/obvious-resize.git'
 
 call vundle#end() 
 filetype plugin indent on 
@@ -77,6 +79,7 @@ filetype plugin indent on    " filetype dependent indent
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let mapleader=","            " set leader key
 let g:mapleader=","
+nnoremap <leader>f :s/\v.* - ([^ ]+)$/\1/g<cr> " feeds
 inoremap <C-F7> <Esc>        " map F7 to Esc (extra key on keyboard)
 map <c-j> <c-w>j             " switching between tabs
 map <c-k> <c-w>k             " ...
@@ -92,6 +95,11 @@ vnoremap <C-S> <C-C>:update<CR>
 inoremap <C-S> <C-O>:update<CR>
 " select last paste in visual mode
 nnoremap <expr> gb '`[' . strpart(getregtype(), 0, 1) . '`]'
+" obvious resize
+noremap <silent> <C-Up> :ObviousResizeUp<CR>
+noremap <silent> <C-Down> :ObviousResizeDown<CR>
+noremap <silent> <C-Left> :ObviousResizeLeft<CR>
+noremap <silent> <C-Right> :ObviousResizeRight<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Navigation / Search
