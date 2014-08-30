@@ -137,7 +137,14 @@ set noswapfile               " disable swapfiles
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Editing 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set clipboard=unnamedplus       " use system clipboard 
+if has("win32") || has("win16")
+    set clipboard=unnamed           " use system cliboard
+else
+    set clipboard=unnamedplus       " use system clipboard 
+endif
+
+
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugin Settings 
