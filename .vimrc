@@ -73,6 +73,11 @@ set shiftround               " indent/outdent to the nearest tabstop
 set expandtab                " use spaces instead of tabs
 set nowrap                   " do not auto wrap lines 
 filetype plugin indent on    " filetype dependent indent
+" show arrow before wrapped lines
+let &showbreak = '  ↳ '
+set wrap
+set cpo=n
+set spell                    " enable spell checking
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Shortcuts 
