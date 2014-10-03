@@ -22,16 +22,20 @@ Bundle 'gmarik/vundle'
 Bundle 'tomasr/molokai'
 " status/tab line 
 Bundle 'bling/vim-airline'
+let g:airline_powerline_fonts = 1 
 " file explorer
 Bundle 'scrooloose/nerdtree'
 " syntax checker 
 Bundle 'scrooloose/syntastic'
+let g:syntastic_python_python_exec = 'usr/bin/python3.4'
 " csv editor 
 Bundle 'chrisbra/csv.vim'
 " surrend stuff with symbols
 Bundle 'tpope/vim-surround.git'
 " obvious resize  
 Bundle 'talek/obvious-resize.git'
+" highlight parentheses "
+Bundle 'dbarsam/vim-rainbow-parentheses.git'
 
 call vundle#end() 
 filetype plugin indent on 
@@ -84,6 +88,8 @@ set spell                    " enable spell checking
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let mapleader=","            " set leader key
 let g:mapleader=","
+nnoremap <leader>a :lnext <cr>   " next error
+nnoremap <leader>b :lprev<cr>    " prev error
 nnoremap <leader>f :s/\v.* - ([^ ]+)$/\1/g<cr> " feeds
 inoremap <C-F7> <Esc>        " map F7 to Esc (extra key on keyboard)
 map <c-j> <c-w>j             " switching between tabs
