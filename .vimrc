@@ -62,7 +62,7 @@ if has('gui_running')
   if has("win32") || has("win16")
     set guifont=DejaVu_Sans_Mono:h11:cANSI
   else
-    set guifont=DejaVu\ Sans\ Mono\ 11
+    set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 11
   endif
 endif
 
@@ -168,3 +168,13 @@ let g:syntastic_auto_loc_list=1
 
 " airline
 let g:airline#extensions#tabline#enabled = 1
+
+""
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Word Boundaries 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+:se iskeyword+=46
+:se iskeyword+=45
+:se iskeyword+=95
