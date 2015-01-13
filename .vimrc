@@ -36,6 +36,8 @@ Bundle 'tpope/vim-surround.git'
 Bundle 'talek/obvious-resize.git'
 " highlight parentheses "
 Bundle 'dbarsam/vim-rainbow-parentheses.git'
+" slim syntax highlighting " 
+Bundle 'slim-template/vim-slim.git'
 
 call vundle#end() 
 filetype plugin indent on 
@@ -168,3 +170,5 @@ let g:syntastic_auto_loc_list=1
 
 " airline
 let g:airline#extensions#tabline#enabled = 1
+
+
