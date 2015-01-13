@@ -36,7 +36,7 @@ Bundle 'tpope/vim-surround.git'
 Bundle 'talek/obvious-resize.git'
 " highlight parentheses "
 Bundle 'dbarsam/vim-rainbow-parentheses.git'
-" slim syntax highlighting " 
+" slim syntax highlighting"
 Bundle 'slim-template/vim-slim.git'
 
 call vundle#end() 
@@ -57,6 +57,7 @@ set hidden                   " hide buffer instead of closing
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 filetype on                  " detect filetypes
 syntax enable                " enable syntax highlighting 
+filetype plugin indent on    " filetype detection, plugin-, indent-files 
 set synmaxcol=512            " no syntax coloring for very long lines
 colorscheme molokai          " set colorscheme 
 " set the font
@@ -64,9 +65,13 @@ if has('gui_running')
   if has("win32") || has("win16")
     set guifont=DejaVu_Sans_Mono:h11:cANSI
   else
-    set guifont=DejaVu\ Sans\ Mono\ 11
+    set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 11
   endif
 endif
+
+
+
+au BufRead,BufNewFile *.md set filetype=markdown  " treat .md as markdown
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Text Formatting
@@ -170,5 +175,15 @@ let g:syntastic_auto_loc_list=1
 
 " airline
 let g:airline#extensions#tabline#enabled = 1
+
+""
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Word Boundaries 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+:se iskeyword+=46
+:se iskeyword+=45
+:se iskeyword+=95
 
 
