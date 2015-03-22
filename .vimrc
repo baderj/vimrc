@@ -38,6 +38,9 @@ Bundle 'talek/obvious-resize.git'
 Bundle 'dbarsam/vim-rainbow-parentheses.git'
 " slim syntax highlighting"
 Bundle 'slim-template/vim-slim.git'
+" markdown hightlighting
+Bundle 'godlygeek/tabular'
+Bundle 'plasticboy/vim-markdown'
 
 call vundle#end() 
 filetype plugin indent on 
@@ -69,7 +72,7 @@ if has('gui_running')
   endif
 endif
 
-
+let g:vim_markdown_frontmatter=1 " highlight yaml frontmatter
 
 au BufRead,BufNewFile *.md set filetype=markdown  " treat .md as markdown
 
