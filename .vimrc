@@ -38,6 +38,8 @@ Bundle 'talek/obvious-resize.git'
 Bundle 'dbarsam/vim-rainbow-parentheses.git'
 " slim syntax highlighting"
 Bundle 'slim-template/vim-slim.git'
+" surround " 
+Bundle 'tpope/vim-surround.git'
 
 call vundle#end() 
 filetype plugin indent on 
