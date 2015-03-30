@@ -17,32 +17,36 @@ endif
 
 
 " let Vundle manage Vundle
-Bundle 'gmarik/vundle' 
+Plugin 'gmarik/Vundle.vim' 
 " colorscheme
-Bundle 'tomasr/molokai'
+Plugin 'tomasr/molokai'
 " status/tab line 
-Bundle 'bling/vim-airline'
+Plugin 'bling/vim-airline'
 let g:airline_powerline_fonts = 1 
 " file explorer
-Bundle 'scrooloose/nerdtree'
+Plugin 'scrooloose/nerdtree'
 " syntax checker 
-Bundle 'scrooloose/syntastic'
+Plugin 'scrooloose/syntastic'
 let g:syntastic_python_python_exec = 'usr/bin/python3.4'
 " csv editor 
-Bundle 'chrisbra/csv.vim'
-" surrend stuff with symbols
-Bundle 'tpope/vim-surround.git'
+Plugin 'chrisbra/csv.vim'
 " obvious resize  
-Bundle 'talek/obvious-resize.git'
+Plugin 'talek/obvious-resize.git'
 " highlight parentheses "
-Bundle 'dbarsam/vim-rainbow-parentheses.git'
+Plugin 'dbarsam/vim-rainbow-parentheses.git'
 " slim syntax highlighting"
-Bundle 'slim-template/vim-slim.git'
+Plugin 'slim-template/vim-slim.git'
 " surround " 
-Bundle 'tpope/vim-surround.git'
+Plugin 'tpope/vim-surround.git'
 " markdown hightlighting
-Bundle 'godlygeek/tabular'
-Bundle 'plasticboy/vim-markdown'
+Plugin 'godlygeek/tabular'
+Plugin 'plasticboy/vim-markdown'
+" ctrlp fuzzy file, buffer, ... finder
+Plugin 'kien/ctrlp.vim'
+" SuperTab
+Plugin 'ervandew/supertab'
+" Multiple Cursors
+Plugin 'terryma/vim-multiple-cursors'
 
 call vundle#end() 
 filetype plugin indent on 
@@ -108,8 +112,6 @@ map <c-j> <c-w>j             " switching between tabs
 map <c-k> <c-w>k             " ...
 map <c-l> <c-w>l             " ...
 map <c-h> <c-w>h             " ...
-ino jj <esc>                 " remap jj to <Esc>
-cno jj <c-c>                 " ...
 vno v <esc>                  " use v in visual mode to switch off
 nmap <leader>nt :NERDTree<cr> " run nerd tree
 nnoremap <leader>c :w<cr>:SyntasticCheck<cr>    
@@ -123,6 +125,8 @@ noremap <silent> <C-Up> :ObviousResizeUp<CR>
 noremap <silent> <C-Down> :ObviousResizeDown<CR>
 noremap <silent> <C-Left> :ObviousResizeLeft<CR>
 noremap <silent> <C-Right> :ObviousResizeRight<CR>
+" Ctrl-e: Go to end of line
+inoremap <c-e> <esc>A
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Navigation / Search
