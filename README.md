@@ -4,6 +4,8 @@
 - ``git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim``
 - ln -s ~/.dotfiles/vimrc/.vimrc ~/.vimrc
 - in Vim: ``:BundleInstall``
+- git clone https://github.com/powerline/fonts.git ~/temp
+- sh ~/temp/install.sh
 
 
 
